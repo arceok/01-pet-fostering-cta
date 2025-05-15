@@ -3,23 +3,54 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background: #e6f7fa; /* light blue background for the page */
+  background: #e6f7fa;
+  font-size: 1.3em; /* larger base font size */
 }
 
 /* Style for the Call-to-Action banner */
 .cta-banner {
-  background-color: #2bb3c0; /* fallback teal background */
-  color: #ffffff; /* white text for contrast */
+  background-color: #2bb3c0;
+  color: #ffffff;
   text-align: center;
-  padding: 60px 20px; /* tall banner with space around content */
+  padding: 100px 30px; /* much taller banner */
   margin: 0;
-  /* Add background image */
   background-image: url('img/cta-bg.jpg');
   background-size: cover;
   background-position: center;
-  position: relative; /* Needed for overlay */
+  position: relative;
   z-index: 1;
   overflow: hidden;
+}
+
+.cta-banner h1 {
+  font-size: 3.5em; /* much larger heading */
+  margin-bottom: 36px;
+  letter-spacing: 2px;
+}
+
+.cta-banner p {
+  font-size: 1.7em;
+  margin-bottom: 45px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #1976d2;
+  color: #fff;
+  text-decoration: none;
+  padding: 24px 60px;
+  font-size: 1.5em;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #145a86;
 }
 
 /* Overlay to make text readable */
@@ -30,11 +61,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(43, 179, 192, 0.7); /* semi-transparent teal overlay */
+  background: rgba(43, 179, 192, 0.7);
   z-index: 0;
 }
 
-/* Ensure content is above overlay */
 .cta-banner h1,
 .cta-banner p,
 .cta-banner .cta-button {
@@ -42,71 +72,82 @@ body {
   z-index: 1;
 }
 
-/* Large main heading */
-.cta-banner h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-/* Short description */
-.cta-banner p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Eye-catching button style */
-.cta-button {
-  display: inline-block;
-  background-color: #1976d2; /* bright blue button */
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 35px;
-  font-size: 1.1em;
-  border-radius: 5px;
-  font-weight: bold;
-  /* Make the button stand out */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.2s;
-}
-
-/* Button hover effect */
-.cta-button:hover {
-  background-color: #145a86; /* darker blue on hover */
-}
-
 /* Simple site header style */
 .site-header {
-  background-color: #1976d2; /* blue from the palette */
+  background-color: #1976d2;
   color: #ffffff;
   text-align: center;
-  padding: 18px 0;
+  padding: 36px 0;
   margin: 0;
 }
 
-/* Header site name style */
 .site-header h2 {
   margin: 0;
-  font-size: 2em;
-  letter-spacing: 2px;
+  font-size: 3em;
+  letter-spacing: 3px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation bar styles */
+.main-nav {
+  background-color: #145a86;
+  padding: 12px 0; /* smaller padding */
+  text-align: center;
+  font-size: 1em;   /* smaller font size */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 18px;   /* less space between links */
+  font-size: 1em;   /* smaller font size */
+  padding: 6px 12px; /* smaller padding */
+  border-radius: 6px;
+}
+
+.nav-link:hover {
+  background-color: #1976d2;
+}
+
+.search-form {
+  display: inline-block;
+  margin-left: 18px;
+  vertical-align: middle;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: 1px solid #b2e0ea;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.search-button {
+  padding: 6px 16px;
+  background-color: #2bb3c0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95em;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.search-button:hover {
+  background-color: #1976d2;
 }
 
 /* Info section with two columns */
 .info-section {
-  max-width: 800px;
-  margin: 40px auto 0 auto; /* center the section */
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
   background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
   overflow: hidden;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
-/* Image column */
 .info-image {
   width: 48%;
   float: left;
@@ -116,32 +157,30 @@ body {
 }
 
 .info-image img {
-  max-width: 90%;
+  max-width: 98%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
-/* Text column */
 .info-text {
   width: 48%;
   float: right;
-  padding: 0 20px;
+  padding: 0 40px;
   box-sizing: border-box;
   color: #145a86;
 }
 
 .info-text h3 {
   margin-top: 0;
-  font-size: 1.5em;
+  font-size: 2.2em;
   color: #1976d2;
 }
 
 .info-text p {
-  font-size: 1.1em;
+  font-size: 1.4em;
   margin-bottom: 0;
 }
 
-/* Clear floats after the columns */
 .info-section::after {
   content: "";
   display: table;
@@ -150,59 +189,104 @@ body {
 
 /* Pet cards section */
 .pet-cards-section {
-  max-width: 1000px;
-  margin: 40px auto;
+  max-width: 1200px; /* Match info/donate section width */
+  margin: 30px auto;
   padding: 0 10px;
   text-align: center;
 }
 
 .pet-cards-section h3 {
   color: #1976d2;
-  margin-bottom: 24px;
-  font-size: 1.7em;
+  margin-bottom: 18px;
+  font-size: 2.2em; /* increased font size */
 }
 
 /* Container for all cards */
 .pet-cards-container {
   width: 100%;
-  /* Clear floats after cards */
   overflow: hidden;
 }
 
 /* Individual pet card */
 .pet-card {
-  width: 31%;
+  width: 30%;
   float: left;
   background: #f4fbfc;
-  border: 1px solid #b2e0ea;
-  border-radius: 8px;
-  margin: 1.16%;
+  border: 2px solid #b2e0ea;
+  border-radius: 12px;
+  margin: 1.66%;
   box-sizing: border-box;
-  padding: 32px 10px;
-  margin-bottom: 32px;
+  padding: 32px 14px;
+  margin-bottom: 34px;
   min-height: 180px;
 }
 
 .pet-card h4 {
-  margin: 0 0 10px 0;
+  margin: 0 0 16px 0;
   color: #145a86;
-  font-size: 1.2em;
+  font-size: 1.25em;
 }
 
 .pet-card p {
-  margin: 6px 0;
+  margin: 10px 0;
   color: #1976d2;
-  font-size: 1em;
+  font-size: 1.15em;
 }
 
 /* Pet card image style */
 .pet-card-img {
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 16px;
-  border: 2px solid #2bb3c0;
+  border: 2.5px solid #2bb3c0;
+}
+
+/* Donate and Volunteer sections */
+.donate-section,
+.volunteer-section {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #f4fbfc;
+  border: 2px solid #b2e0ea;
+  border-radius: 12px;
+  text-align: center;
+  padding: 48px 30px 44px 30px;
+}
+
+.donate-section h3,
+.volunteer-section h3 {
+  color: #1976d2;
+  margin-bottom: 24px;
+  font-size: 2em;
+}
+
+.donate-section p,
+.volunteer-section p {
+  color: #145a86;
+  font-size: 1.4em;
+  margin-bottom: 28px;
+}
+
+.donate-button,
+.volunteer-button {
+  display: inline-block;
+  background-color: #2bb3c0;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 48px;
+  font-size: 1.3em;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.donate-button:hover,
+.volunteer-button:hover {
+  background-color: #1976d2;
 }
 
 /* Responsive: stack cards on small screens */
@@ -211,5 +295,19 @@ body {
     width: 90%;
     float: none;
     margin: 10px auto;
+    min-height: 0;
+    padding: 10px 3px;
+  }
+  .pet-card-img {
+    width: 60px;
+    height: 60px;
+  }
+  .info-section,
+  .donate-section,
+  .volunteer-section {
+    padding: 20px 5px;
+  }
+  .info-text {
+    padding: 0 10px;
   }
 }
